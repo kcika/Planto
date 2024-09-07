@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planto</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery -->
+
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html" class="logo">Planto</a>
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="activated">Home</a>
+            <a href="about.html" class="">About Us</a>
+            <a href="shop.html" class="">Shop</a>
+            <a href="contact.html" class="">Contact Us</a>
+            <a href="blogs.html" class="">Blogs</a>
+        </nav>
+        <div class="icons flex">
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            <!-- <i class="fa-regular fa-heart"></i> -->
+            <a href="login.html"><i class="fa-regular fa-user"></i></a>
+            <span class="icon-cart"><i class="fa-solid fa-cart-shopping" id="cartIcon"></i><span
+                    class="itemsInCart">0</span></span>
+            <i class="fa-solid fa-bars" id="menu-bars"></i>
+        </div>
+    </header>
+    <div class="search">
+        <div class="container">
+            <div class="searchInput d-flex ">
+                <i class="fa-solid fa-magnifying-glass fs-24 text-white"></i><input type="search" name="search"
+                    id="search" placeholder="Search here">
+            </div>
+        </div>
+    </div>
+    <div id="cart" class="cart">
+        <a href="javascript:void(0)" class="closebtn text-black" onclick="closeNav()">&times;</a>
+        <p class="fs-32 fw-semibold">Shopping Cart</p>
+        <div class="cart-items">
+            <!-- render cart items -->
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                Subtotal (0 items) : rs.0
+            </div>
+            <div class="checkout">
+                Proceed to chcekout
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <!-- hero section -->
+        <section class="home-page">
+            <!-- <img src="images/pexels-nietjuh-776656.jpg" width="100%" height="" alt=""> -->
+            <div class="content">
+                <p class="fs-32 fw-semibold">Bringing Nature Home</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur tempore dolorem qui. Magnam
+                    blanditiis veniam dolorem dolore voluptate doloremque ipsum.</p>
+                <button class="btn-shop">Shop Now</button>
+            </div>
+        </section>
+        <div class="container">
+            <section class="newbest">
+                <div class="newarrival grid-col">
+                    <img src="images/bestsellers.jpeg" width="100%" alt="">
+                    <div class="desc">
+                        <p class="fs-24 fw-semibold">New Arrivals</p>
+                        <p class="fs-32 fw-semibold">Medicinal Plants</p>
+                        <p class="fs-18">starting at <span class="fs-18 fw-semibold">Rs.199</span></p>
+                        <a href="shop.html" class="fs-18 fw-semibold">Shop Now</a>
+                    </div>
+                </div>
+                <div class="bestseller grid-col">
+                    <img src="images/new-arrivals.jpg" width="100%" alt="">
+                    <div class="desc">
+                        <p class="fs-24 fw-semibold">Bestsellers</p>
+                        <p class="fs-32 fw-semibold">Monstera Plants</p>
+                        <p class="fs-18">starting at <span class="fs-18 fw-semibold">Rs.599</span></p>
+                        <a href="shop.html" class="fs-18 fw-semibold">Shop Now</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Our products section -->
+            <section class="our-products">
+                <p class="fs-32 fw-semibold text-center">Our Products</p>
+                <div class="decor d-flex align-center justify-center">
+                    <div></div>
+                    <i class="fa-solid fa-clover"></i><i class="fa-solid fa-clover"></i><i
+                        class="fa-solid fa-clover"></i><i class="fa-solid fa-clover"></i>
+                    <div></div>
+                </div>
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-button fs-24 fw-semibold tabactive"
+                            onclick="openTab(event, 'tab1')">Featured</button>
+                        <button class="tab-button fs-24 fw-semibold"
+                            onclick="openTab(event, 'tab2')">Bestsellers</button>
+                        <button class="tab-button fs-24 fw-semibold"
+                            onclick="openTab(event, 'tab3')">NewArrivals</button>
+                    </div>
+                    <div id="tab1" class="tab-content tabactive">
+                        <section class="bestseller-section">
+                            <div class="bestproducts">
+                                <div class="product-card"
+                                    data-category="small cactus fourninenine four three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/cactus-plant-elongated.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Cactus Plant</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(66)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.549</p>
+                                            <p class="fs-20 fw-semibold">Rs. 399</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card" data-category="large fourninenine three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/lemon-grass.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Lemon Grass Plant</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <span>(39)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.799</p>
+                                            <p class="fs-20 fw-semibold">Rs. 499</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card" data-category="small cactus four fourninenine three instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/echinocactusGrusonii.jpeg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Echinocactus Grusonii</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <span>(199)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.499</p>
+                                            <p class="fs-20 fw-semibold">Rs. 399</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card" data-category="small oneNineNine four three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/tiger-tooth-aloevera.jpeg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Tiger Tooth Aloe Vera</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(66)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.200</p>
+                                            <p class="fs-20 fw-semibold">Rs. 149</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bestproducts">
+                                <div class="product-card"
+                                    data-category="nineNineNine large medium four three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/monstera-plant.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Monstera Plant</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star-half-stroke"></i>
+                                            <span>(81)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.1299</p>
+                                            <p class="fs-20 fw-semibold">Rs. 749</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card"
+                                    data-category="succulents small four fourninenine three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/echeveria-Pegasus.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Echeveria Pegasus</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(66)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.399</p>
+                                            <p class="fs-20 fw-semibold">Rs. 249</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card"
+                                    data-category="creepers hanging medium nineNineNine three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/turtle-vine.webp" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Turtle Vine</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star-half-stroke"></i>
+                                            <span>(112)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.1299</p>
+                                            <p class="fs-20 fw-semibold">Rs. 799</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card"
+                                    data-category="nineNineNine large medium four three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/monstera-plant.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Monstera Plant</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star-half-stroke"></i>
+                                            <span>(81)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.1299</p>
+                                            <p class="fs-20 fw-semibold">Rs. 749</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="tab2" class="tab-content">
+                        <section class="bestseller-section">
+                            <div class="bestproducts">
+                                <div class="product-card"
+                                    data-category="succulents small nineNineNine four three two air instock">
+                                    <div class="badge fs-18 fw-semibold text-center">Bestseller</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/snake-plant.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Snake Plant</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(80)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <!-- <p>Rs.499</p> -->
+                                            <p class="fs-20 fw-semibold">
+                                                Rs.299 - Rs.749</p>
+                                        </div>
+                                        <a href="" class="buy-btn">Buy now</a>
+                                    </div>
+                                </div>
+                                <div class="product-card"
+                                    data-category="medium fourninenine four three two air instock">
+                                    <div class="badge fs-18 fw-semibold text-center">Bestseller</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/indoor-plants.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Bamboo Palm Plant</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <span>(192)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.499</p>
+                                            <p class="fs-20 fw-semibold">Rs. 380</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card"
+                                    data-category="small medium fourninenine four three two hanging creepers">
+                                    <div class="badge fs-18 fw-semibold text-center">Bestseller</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/money-plant-golden.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Money Plant - Golden</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <span>(192)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.299</p>
+                                            <p class="fs-20 fw-semibold">Rs. 249</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card"
+                                    data-category="succulents medium fourninenine four three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">Bestseller</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/mini-jade-plant.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Jade Plant Mini</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <span>(39)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <!-- <p>Rs.799</p> -->
+                                            <p class="fs-20 fw-semibold">Rs. 249</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bestproducts">
+                                <div class="product-card"
+                                    data-category="succulents small four fourninenine three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/haworthia-Cymbiformis-Plant.jpg" width="380"
+                                                alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Haworthia Cymbiformis Plant</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(41)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.299</p>
+                                            <p class="fs-20 fw-semibold">
+                                                Rs.249</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card" data-category="small cactus four fourninenine three instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/echinocactusGrusonii.jpeg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Echinocactus Grusonii</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <span>(199)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.499</p>
+                                            <p class="fs-20 fw-semibold">Rs. 399</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card" data-category="large four three hanging nineNineNine instock">
+                                    <div class="badge fs-18 fw-semibold text-center">Bestseller</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/spider-plant-hanging.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Spider Plant With Hanging Pot</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <span>(199)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.1199</p>
+                                            <p class="fs-20 fw-semibold">Rs. 899</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <li class="product-card"
+                                    data-category="medium oneNineNine four three two medicinal instock">
+                                    <div class="badge fs-18 fw-semibold text-center">20% OFF</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/aleovera-plant.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Aloe Vera</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(66)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.200</p>
+                                            <p class="fs-20 fw-semibold">Rs. 160</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </li>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="tab3" class="tab-content">
+                        <section class="bestseller-section">
+                            <div class="bestproducts">
+                                <div class="product-card"
+                                    data-category="small medium fourninenine four three two hanging creepers">
+                                    <div class="badge fs-18 fw-semibold text-center">Bestseller</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/money-plant-golden.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Money Plant - Golden</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <span>(192)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.299</p>
+                                            <p class="fs-20 fw-semibold">Rs. 249</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card"
+                                    data-category="small creepers oneNineNine four three two instock">
+                                    <!-- <div class="badge fs-18 fw-semibold text-center">Bestseller</div> -->
+                                    <div class="product-img">
+                                        <a href=""><img src="images/english_ivy.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">English Ivy</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(21)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <!-- <p>Rs.499</p> -->
+                                            <p class="fs-20 fw-semibold">
+                                                Rs.149</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card"
+                                    data-category="succulents small fourninenine four three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/snake-plant-golden.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Snake Plant - Golden</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(22)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.549</p>
+                                            <p class="fs-20 fw-semibold">Rs. 349</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card"
+                                    data-category="small cactus fourninenine four three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/cactus-plant-elongated.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Cactus Plant</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(66)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p class="line-through">Rs.549</p>
+                                            <p class="fs-20 fw-semibold">Rs. 399</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bestproducts">
+                                <div class="product-card"
+                                    data-category="large medium four medicinal fourninenine three two instock">
+                                    <!-- <div class="badge fs-18 fw-semibold text-center">SALE</div> -->
+                                    <div class="product-img">
+                                        <a href=""><img src="images/rosemary-plant.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Rosemary Plant</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(22)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <!-- <p class="line-through">Rs.549</p> -->
+                                            <p class="fs-20 fw-semibold">Rs. 399</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card"
+                                    data-category="small four cactus fourninenine three two instock">
+                                    <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                                    <div class="product-img">
+                                        <a href=""><img src="images/heartHoya.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Heart Hoya Plant</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <span>(199)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <p>Rs.599</p>
+                                            <p class="fs-20 fw-semibold">Rs. 399</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card"
+                                    data-category="succulents medium fourninenine four three two instock">
+                                    <!-- <div class="badge fs-18 fw-semibold text-center">SALE</div> -->
+                                    <div class="product-img">
+                                        <a href=""><img src="images/mini-jade-plant.jpg" width="380" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fs-20 fw-semibold">Jade Plant Mini</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                            <span>(39)</span>
+                                        </div>
+                                        <div class="price d-flex align-center">
+                                            <!-- <p>Rs.799</p> -->
+                                            <p class="fs-20 fw-semibold">Rs. 249</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                                <div class="product-card">
+                                    <div class="product-img">
+                                        <a href=""><img src="images/snake-plant.jpg" width="435" alt=""></a>
+                                        <div class="wishlist-icon">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="name fw-semibold">Snake Plant</p>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <span>(202)</span>
+                                        </div>
+                                        <div class="price fw-semibold">
+                                            <p>Rs.599</p>
+                                        </div>
+                                        <a href="" class="buy-btn">View Product</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- coupon section -->
+        <section class="coupon-section">
+            <div class="coupon">
+                <div class="coupon-overlay"></div>
+                <img src="images/sale-img.webp" width="100%" height="" alt="">
+                <div class="text">
+                    <p class="fs-24 fw-semibold text-center">First time here?</p>
+                    <p class="fs-32 fw-semibold text-center">Get Additional 16% discount on your first purchase</p>
+                    <p class="fs-20 text-center">with code <span class="coupon-code fs-24">NEWUSER1208</span></p>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <!-- airpurifying section -->
+            <section class="air-purifying">
+                <div class="ap-img">
+                    <img src="images/airpurifying.jpg" class="rounded-20" width="100%" alt="air-purifying-plants">
+                </div>
+                <div class="ap-text d-flex flex-column justify-center">
+                    <p class="fs-32 fw-semibold">Air Purifying Plants</p>
+                    <p class="fs-20 m-10">Indoor air-purifying plants offer a host of compelling benefits that make them
+                        a valuable addition to any home or office.Incorporating air-purifying plants into your decor is
+                        a simple, natural way to elevate our living space while promoting well-being and comfort.</p>
+                    <button class="btn-shop m-10">Shop Now</button>
+                </div>
+            </section>
+            <!-- trending now section -->
+            <section class="trending-products">
+                <div class="heading d-flex justify-between align-center">
+                    <p class="fs-28 fw-semibold">Trending Now</p>
+                    <a href="shop.html" class="fs-20 fw-semibold text-black">View all <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="bestproducts">
+                    <div class="product-card" data-category="medium fourninenine four three two air instock">
+                        <div class="badge fs-18 fw-semibold text-center">Bestseller</div>
+                        <div class="product-img">
+                            <a href=""><img src="images/indoor-plants.jpg" width="380" alt=""></a>
+                            <div class="wishlist-icon">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <p class="name fs-20 fw-semibold">Bamboo Palm Plant</p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>(192)</span>
+                            </div>
+                            <div class="price d-flex align-center">
+                                <p class="line-through">Rs.499</p>
+                                <p class="fs-20 fw-semibold">Rs. 380</p>
+                            </div>
+                            <a href="" class="buy-btn">View Product</a>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="medium oneNineNine four three two medicinal instock">
+                        <div class="badge fs-18 fw-semibold text-center">20% OFF</div>
+                        <div class="product-img">
+                            <a href=""><img src="images/aleovera-plant.jpg" width="380" alt=""></a>
+                            <div class="wishlist-icon">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <p class="name fs-20 fw-semibold">Aloe Vera</p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(66)</span>
+                            </div>
+                            <div class="price d-flex align-center">
+                                <p class="line-through">Rs.200</p>
+                                <p class="fs-20 fw-semibold">Rs. 160</p>
+                            </div>
+                            <a href="" class="buy-btn">View Product</a>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="large fourninenine four three two air instock">
+                        <div class="badge fs-18 fw-semibold text-center">SALE</div>
+                        <div class="product-img">
+                            <a href=""><img src="images/rubber-plant.jpg" width="380" alt=""></a>
+                            <div class="wishlist-icon">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <p class="name fs-20 fw-semibold">Rubber Plant</p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>(192)</span>
+                            </div>
+                            <div class="price d-flex align-center">
+                                <p class="line-through">Rs.649</p>
+                                <p class="fs-20 fw-semibold">Rs. 499</p>
+                            </div>
+                            <a href="" class="buy-btn">View Product</a>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="succulents small nineNineNine four three two air instock">
+                        <div class="badge fs-18 fw-semibold text-center">Bestseller</div>
+                        <div class="product-img">
+                            <a href=""><img src="images/snake-plant.jpg" width="380" alt=""></a>
+                            <div class="wishlist-icon">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <p class="name fs-20 fw-semibold">Snake Plant</p>
+                            <div class="ratings">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(80)</span>
+                            </div>
+                            <div class="price d-flex align-center">
+                                <!-- <p>Rs.499</p> -->
+                                <p class="fs-20 fw-semibold">
+                                    Rs.299 - Rs.749</p>
+                            </div>
+                            <a href="" class="buy-btn">View Product</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- blogs section -->
+            <div class="blog-container">
+                <div class="d-flex justify-between align-center">
+                    <p class="fs-32 fw-semibold">Blogs</p>
+                    <a href="blogs.html" class="fs-20 fw-semibold text-black">View all <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="blogs">
+                    <div class="blog scale">
+                        <a href="blogs/must-have-plant-tools-when-becoming-a-plant-parent.html" class="text-black">
+                            <div class="overflow-hidden">
+                                <img src="images/blog1.jpg" width="580" alt="blog1">
+                            </div>
+                            <p class="fs-24 fw-semibold">15 Essential Plant Tools for Indoor Houseplants</p>
+                            <p class="date">Aug 2, 2023</p>
+                            <p class="fs-18">The proper plant tools are the key to success when becoming a plant
+                                parent.
+                                Whether
+                                you are worried about your plant
+                                getting the water, sun, or ... <a
+                                    href="blogs/must-have-plant-tools-when-becoming-a-plant-parent.html"
+                                    class="read-more">read
+                                    more</a></p>
+                        </a>
+                    </div>
+                    <div class="blog scale d-none">
+                        <a href="blogs/ways-houseplants-improve-productivity.html" class="text-black">
+                            <div class="overflow-hidden">
+                                <img src="images/blog2.jpg" width="580" alt="blog2">
+                            </div>
+                            <p class="fs-24 fw-semibold">8 Ways Houseplants Improve Productivity</p>
+                            <p class="date">July 23, 2024</p>
+                            <p class="fs-18">Studies have shown that houseplants improve productivity by 15% when
+                                added
+                                to
+                                an office environment. The presence of
+                                indoor plants can reduce stress....
+                                <a href="blogs/ways-houseplants-improve-productivity.html" class="read-more">read
+                                    more</a>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="blog scale d-none">
+                        <a href="blogs/how-to-grow-basil-indoors.html" class="text-black">
+                            <div class="overflow-hidden">
+                                <img src="images/blog13.jpg" width="520" alt="">
+                            </div>
+                            <p class="fs-20 fw-semibold">How to Grow Basil Indoors</p>
+                            <p class="date">June 14, 2024</p>
+                            <p class="fs-18">Growing basil indoors is perfectly possible for most home growers,
+                                especially
+                                for those already growing vegetables
+                                indoors. This herb ideally...
+                                <a href="" class="read-more">read more</a>
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- care tips -->
+            <section class="care-tips">
+                <div class="ct-text d-flex flex-column justify-center">
+                    <p class="fs-32 fw-semibold m-10">Care Tips for Your Plants</p>
+                    <p class="fs-18">1. After recieveing the plants open the box 📦 as soon as possible .</p>
+                    <p class="fs-18">2. Air dry the plants for 2-3 hours on fresh air .</p>
+                    <p class="fs-18">3. Plant in well drained soil . ( 30%sand + 30% soil + 20% vermicompost + 20%
+                        perlite ) .</p>
+                    <p class="fs-18">3.⁠Water plants after 2-3 days and don’t give direct sunlight to newly planted
+                        succulents for at least 10 days .</p>
+                    <p class="fs-18">Note: Always water succulents when top layer of soil feels dry in roots of
+                        plant rather than leaves .</p>
+                </div>
+                <div class="ct-img">
+                    <img src="images/plant-parent-club.jpg" class="rounded-20" width="100%" alt="care-tips-plants">
+                </div>
+            </section>
+        </div>
+        <!-- testimonials section -->
+        <section class="testimonials">
+            <p class="fs-32 fw-semibold">Happy Customers</p>
+            <div class="testi-container">
+                <div class="slide fade">
+                    <img src="images/testimonial-5.jpeg" alt="" class="image">
+                    <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="fs-18">"Good Plants exceeded my expectations! The plants arrived in perfect condition
+                        and have brightened up my home. Will
+                        definitely be ordering again!"</p>
+                    <i class="fa-solid fa-quote-left fs-32"></i>
+                    <p class="writerName fs-18 fw-semibold">Poorvi Singh</p>
+                </div>
+                <div class="slide fade">
+                    <img src="images/testimonial-1.jpeg" alt="" class="image">
+                    <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="fs-18">"Amazing experience from start to finish! The plants were healthy, beautifully
+                        packaged, and the customer service was
+                        fantastic. Highly recommend!"</p>
+                    <i class="fa-solid fa-quote-left fs-32"></i>
+                    <p class="writerName fs-18 fw-semibold">Hannah Nelson </p>
+                </div>
+                <div class="slide fade">
+                    <img src="images/testimonial-3.jpeg" alt="" class="image">
+                    <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="fs-18">"I was skeptical about buying plants online, but Good Plants made it so easy.
+                        My new plants are thriving, and the
+                        quality is top-notch!"</p>
+                    <i class="fa-solid fa-quote-left fs-32"></i>
+                    <p class="writerName fs-18 fw-semibold">Bob Marley</p>
+                </div>
+                <div class="slide fade">
+                    <img src="images/testimonial-4.jpeg" alt="" class="image">
+                    <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="fs-18">"Fast delivery, great packaging, and gorgeous plants! Good Plants is now my
+                        go-to for all things green. Love the variety
+                        they offer!"</p>
+                    <i class="fa-solid fa-quote-left fs-32"></i>
+                    <p class="writerName fs-18 fw-semibold">Peter Joe</p>
+                </div>
+                <div class="slide fade">
+                    <img src="images/testimonial-2.jpeg" alt="" class="image">
+                    <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="fs-18">"I’m so impressed with Good Plants! The selection is incredible, and my plants
+                        arrived in perfect shape. Shopping here
+                        was a breeze!"</p>
+                    <i class="fa-solid fa-quote-left fs-32"></i>
+                    <p class="writerName fs-18 fw-semibold">Emma Washington</p>
+                </div>
+            </div>
+            <button class="prev-btn" onclick="plusSlides(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="next-btn" onclick="plusSlides(1)"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </section>
+        <!-- features -->
+        <section class="features">
+            <div class="fast-del d-flex align-center justify-center">
+                <i class="fa-solid fa-truck-fast fs-32"></i>
+                <div>
+                    <p class="fs-24 fw-semibold">Fast delivery</p>
+                    <p class="fs-20">Fast and secure delivery.</p>
+                </div>
+            </div>
+            <div class="support d-flex align-center justify-center">
+                <i class="fa-solid fa-headset fs-32"></i>
+                <div>
+                    <p class="fs-24 fw-semibold">Online Support</p>
+                    <p class="fs-20">24 * 7 Online support</p>
+                </div>
+            </div>
+            <div class="return d-flex align-center justify-center">
+                <i class="fa-solid fa-arrows-rotate fs-32"></i>
+                <div>
+                    <p class="fs-24 fw-semibold">Easy Return</p>
+                    <p class="fs-20">Easy Return within 10-15 days.</p>
+                </div>
+            </div>
+            <div class="security d-flex align-center justify-center">
+                <i class="fa-regular fa-credit-card fs-32"></i>
+                <div>
+                    <p class="fs-24 fw-semibold">Safe Payment</p>
+                    <p class="fs-20">100% Secured Payment</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="left-section">
+                <h1>Planto</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Corporis sit qui cupiditate impedit nihil!
+                    Dolore
+                    expedita iure nostrum facere veritatis!</p>
+                <p><strong>Address :</strong> Haldwani, Nainital,Uttarakhand, India
+                <p><strong>Call us for Support :</strong> +91- 6397950266</p>
+                <p><strong>Email :</strong> planto@gmail.com</p>
+
+            </div>
+            <div class="middle-section">
+                <ul class="accordion-item">
+                    <p class="accordion-header d-flex justify-between">Quick Links <span class="downIcons"><i
+                                class="fa-solid fa-chevron-down"></i></span></p>
+                    <div class="accordion-content">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                    </div>
+                </ul>
+                <ul class="accordion-item">
+                    <p class="accordion-header d-flex justify-between">Top Categories <span class="downIcons"><i
+                                class="fa-solid fa-chevron-down"></i></span></p>
+                    <div class="accordion-content">
+                        <li><a href="">Indoor plants</a></li>
+                        <li><a href="">Medicinal Plants</a></li>
+                        <li><a href="">Hanging Plants</a></li>
+                        <li><a href="">Flowering Plants</a></li>
+                        <li><a href="">Gardening Tools</a></li>
+                    </div>
+                </ul>
+                <ul class="accordion-item">
+                    <p class="accordion-header d-flex justify-between">Help <span class="downIcons"><i
+                                class="fa-solid fa-chevron-down"></i></span></p>
+                    <div class="accordion-content">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">Store Locator</a></li>
+                        <li><a href="">Cancellation & Return</a></li>
+                        <li><a href="">Shipping & Delivery</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="right-section">
+                <h2>Sign up for our newsletter</h2>
+                <p>For plant care tips, our featured plant of the week, exclusive offers and discounts</p>
+                <form action="">
+                    <div class="subscribe">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+                <div class="footer-icons">
+                    <h3>Follow Us:</h3>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script src="script.js"></script>
+<script>
+    // footer accordion
+    document.addEventListener('DOMContentLoaded', function () {
+        var headers = document.querySelectorAll('.accordion-header');
+
+        headers.forEach(function (header) {
+            header.addEventListener('click', function () {
+                var content = this.nextElementSibling;
+                var isOpen = content.style.display === 'block';
+
+                // Close all contents
+                document.querySelectorAll('.accordion-content').forEach(function (item) {
+                    item.style.display = 'none';
+                });
+
+                // Open the clicked one if it wasn't already open
+                if (!isOpen) {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    });
+</script>
+
+</html>

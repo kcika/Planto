@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planto</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html" class="logo">Planto</a>
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="">Home</a>
+            <a href="about.html" class="">About Us</a>
+            <a href="shop.html" class="">Shop</a>
+            <a href="contact.html" class="activated">Contact Us</a>
+            <a href="blogs.html" class="">Blogs</a>
+        </nav>
+        <div class="icons flex">
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            <!-- <i class="fa-regular fa-heart"></i> -->
+            <a href="login.html"><i class="fa-regular fa-user"></i></a>
+            <span class="icon-cart"><i class="fa-solid fa-cart-shopping" id="cartIcon"></i><span
+                    class="itemsInCart">0</span></span>
+            <i class="fa-solid fa-bars" id="menu-bars"></i>
+        </div>
+    </header>
+    <div class="search">
+        <div class="container">
+            <div class="searchInput d-flex ">
+                <i class="fa-solid fa-magnifying-glass fs-24 text-white"></i><input type="search" name="search"
+                    id="search" placeholder="Search here">
+            </div>
+        </div>
+    </div>
+    <div id="cart" class="cart">
+        <a href="javascript:void(0)" class="closebtn text-black" onclick="closeNav()">&times;</a>
+        <p class="fs-32 fw-semibold">Shopping Cart</p>
+        <!-- <div>
+                    <p class="fs-28">Your cart is currently empty</p>
+                    <img src="images/empty-cart.svg" class="m-30" width="300" alt="">
+                    <button class="btn-shop" onclick="closeNav()">Shop now</button>
+                </div> -->
+        <div class="cart-items">
+            <!-- render cart items -->
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                Subtotal (0 items) : rs.0
+            </div>
+            <div class="checkout">
+                Proceed to chcekout
+            </div>
+        </div>
+    </div>
+    <section class="contact-section">
+        <div class="contact-img">
+            <div class="overlay"></div>
+            <img src="images/contact-hero.webp" width="100%" alt="">
+            <div class="contact-text text-center">
+                <p class="fw-semibold">Get in Touch with Us</p>
+                <p class="fs-28">We’re here to help with all your plant needs!</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="contact-form">
+                <div class="text-center">
+                    <p class="fs-32 fw-semibold m-10">Have a question or feedback ?</p>
+                    <p class="fs-18 m-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ipsa omnis
+                        atque
+                        aut ipsum
+                        aperiam earum nam vitae reprehenderit qui cum magnam repudiandae. Omnis obcaecati nostrum
+                        fugit dignissimos sunt commodi?</p>
+                </div>
+                <div class="contact">
+                    <p class="fs-32 fw-semibold">Send Message</p>
+                    <form action="">
+                        <label for="name" class="fs-20 fw-semibold">Name</label><br>
+                        <input type="name" name="name" id="name" placeholder="Your Name"><br>
+                        <label for="email" class="fs-20 fw-semibold">Email</label><br>
+                        <input type="email" name="email" id="email" placeholder="Your Email Address"><br>
+                        <label for="subject" class="fs-20 fw-semibold">Subject</label><br>
+                        <select name="subject" id="subject">
+                            <option value="1">General Inquiry</option>
+                            <option value="2">Order Support</option>
+                            <option value="3">Plant Care Advice</option>
+                            <option value="4">Collaboration</option>
+                            <option value="5">Others</option>
+                        </select><br>
+                        <label for="textarea" class="fs-20 fw-semibold">Message</label><br>
+                        <textarea name="mssg" id="mssg" placeholder="How can we help you?" rows="7"></textarea><br>
+                        <button type="submit" id="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <p class="fs-28 fw-semibold text-center">Find Us On Google Map</p>
+            <p class="fs-18 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptate
+                unde quidem <br>
+                recusandae est exercitationem deserunt enim ea assumenda vel!</p>
+            <div class="location">
+                <div>
+                    <img src="images/map.png" width="100%" alt="">
+                </div>
+                <div class="location-text">
+                    <p class="fs-20 fw-semibold">Get in Touch</p>
+                    <p class="fs-28 fw-semibold m-10">We're here to help.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusamus consequuntur sed
+                        amet sapiente labore.</p>
+                    <div class="d-flex align-center m-10">
+                        <i class="fa-solid fa-phone"></i>
+                        <p class="fs-18"> +1 (123) 456-7890</p>
+                    </div>
+                    <div class="d-flex align-center m-10">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p class="fs-18"> support@planto.com</p>
+                    </div>
+                    <div class="d-flex align-center m-10">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p class="fs-18"> Haldwani, Nainital,Uttarakhand, India</p>
+                    </div>
+                    <div class="d-flex align-center m-10">
+                        <i class="fa-solid fa-clock"></i>
+                        <p class="fs-18"> Mon - Fri: 9 AM - 6 PM | Sat: 10 AM - 4 PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="left-section">
+                <h1>Planto</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Corporis sit qui cupiditate impedit nihil!
+                    Dolore
+                    expedita iure nostrum facere veritatis!</p>
+                <p><strong>Address :</strong> Haldwani, Nainital,Uttarakhand, India
+                <p><strong>Call us for Support :</strong> +91- 6397950266</p>
+                <p><strong>Email :</strong> planto@gmail.com</p>
+
+            </div>
+            <div class="middle-section">
+                <ul class="accordion-item">
+                    <p class="accordion-header d-flex justify-between">Quick Links <span class="downIcons"><i
+                                class="fa-solid fa-chevron-down"></i></span></p>
+                    <div class="accordion-content">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                    </div>
+                </ul>
+                <ul class="accordion-item">
+                    <p class="accordion-header d-flex justify-between">Top Categories <span class="downIcons"><i
+                                class="fa-solid fa-chevron-down"></i></span></p>
+                    <div class="accordion-content">
+                        <li><a href="">Indoor plants</a></li>
+                        <li><a href="">Medicinal Plants</a></li>
+                        <li><a href="">Hanging Plants</a></li>
+                        <li><a href="">Flowering Plants</a></li>
+                        <li><a href="">Gardening Tools</a></li>
+                    </div>
+                </ul>
+                <ul class="accordion-item">
+                    <p class="accordion-header d-flex justify-between">Help <span class="downIcons"><i
+                                class="fa-solid fa-chevron-down"></i></span></p>
+                    <div class="accordion-content">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">Store Locator</a></li>
+                        <li><a href="">Cancellation & Return</a></li>
+                        <li><a href="">Shipping & Delivery</a></li>
+                    </div>
+                </ul>
+            </div>
+            <div class="right-section">
+                <h2>Sign up for our newsletter</h2>
+                <p>For plant care tips, our featured plant of the week, exclusive offers and discounts</p>
+                <form action="">
+                    <div class="subscribe">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+                <div class="footer-icons">
+                    <h3>Follow Us:</h3>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script src="script.js"></script>
+
+
+</html>

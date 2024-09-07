@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planto</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery -->
+
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html" class="logo">Planto</a>
+        <nav class="navbar" id="navbar">
+            <a href="index.html" class="activated">Home</a>
+            <a href="about.html" class="">About Us</a>
+            <a href="shop.html" class="">Shop</a>
+            <a href="contact.html" class="">Contact Us</a>
+            <a href="blogs.html" class="">Blogs</a>
+        </nav>
+        <div class="icons flex">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- <i class="fa-regular fa-heart"></i> -->
+            <i class="fa-regular fa-user"></i>
+            <span class="icon-cart"><i class="fa-solid fa-cart-shopping" id="cartIcon"></i><span
+                    class="itemsInCart">0</span></span>
+            <i class="fa-solid fa-bars" id="menu-bars"></i>
+        </div>
+    </header>
+    <div id="cart" class="cart">
+        <a href="javascript:void(0)" class="closebtn text-black" onclick="closeNav()">&times;</a>
+        <p class="fs-32 fw-semibold">Shopping Cart</p>
+        <!-- <div>
+            <p class="fs-28">Your cart is currently empty</p>
+            <img src="images/empty-cart.svg" class="m-30" width="300" alt="">
+            <button class="btn-shop" onclick="closeNav()">Shop now</button>
+        </div> -->
+        <div class="cart-items">
+            <!-- render cart items -->
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                Subtotal (0 items) : rs.0
+            </div>
+            <div class="checkout">
+                Proceed to chcekout
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="container m-30">
+            <div class="products-list">
+                <div class="products">
+                    <!-- render products here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer>
+        <div class="left-section">
+            <h1>Planto</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Corporis sit qui cupiditate impedit nihil! Dolore
+                expedita iure nostrum facere veritatis!</p>
+            <p><strong>Address :</strong> Haldwani, Nainital,Uttarakhand, India
+            <p><strong>Call us for Support :</strong> +91- 6397950266</p>
+            <p><strong>Email :</strong> planto@gmail.com</p>
+
+        </div>
+        <div class="middle-section">
+            <ul>
+                <p class="accordion-btn">Quick Links</p>
+                <div class="accordion-content">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Blogs</a></li>
+                </div>
+            </ul>
+            <ul>
+                <p class="accordion-btn">Top Categories</p>
+                <div class="accordion-content">
+                    <li><a href="">Indoor plants</a></li>
+                    <li><a href="">Medicinal Plants</a></li>
+                    <li><a href="">Hanging Plants</a></li>
+                    <li><a href="">Flowering Plants</a></li>
+                    <li><a href="">Gardening Tools</a></li>
+                </div>
+            </ul>
+            <ul>
+                <p class="accordion-btn">Help</p>
+                <div class="accordion-content">
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Store Locator</a></li>
+                    <li><a href="">Cancellation & Return</a></li>
+                    <li><a href="">Shipping & Delivery</a></li>
+                </div>
+            </ul>
+        </div>
+        <div class="right-section">
+            <h2>Sign up for our newsletter</h2>
+            <p>For plant care tips, our featured plant of the week, exclusive offers and discounts</p>
+            <form action="">
+                <div class="subscribe">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <button type="submit">Subscribe</button>
+                </div>
+            </form>
+            <div class="footer-icons">
+                <h3>Follow Us:</h3>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="products.js"></script>
+<script src="cart.js"></script>
+<script>
+    let cartIcon = document.getElementById("cartIcon");
+    let cart = document.getElementById("cart");
+    let closebtn = document.querySelector(".closebtn");
+
+    cartIcon.addEventListener("click", () => {
+        cart.classList.toggle("cartActive");
+    })
+    closebtn.addEventListener("click", () => {
+        cart.classList.toggle("cartActive");
+    })
+</script>
+
+</html>
