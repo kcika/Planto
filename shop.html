@@ -313,6 +313,42 @@
                     </div>
                 </ul>
             </div>
+            <div class="middle-small">
+                <button class="accordion-header d-flex justify-between">Quick Links <span class="downIcons"><i
+                            class="fa-solid fa-chevron-down"></i></span></button>
+                <div class="accordionContent">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                    </ul>
+                </div>
+
+                <button class="accordion-header d-flex justify-between">Top Categories <span class="downIcons"><i
+                            class="fa-solid fa-chevron-down"></i></span></button>
+                <div class="accordionContent">
+                    <ul>
+                        <li><a href="">Indoor plants</a></li>
+                        <li><a href="">Medicinal Plants</a></li>
+                        <li><a href="">Hanging Plants</a></li>
+                        <li><a href="">Flowering Plants</a></li>
+                        <li><a href="">Gardening Tools</a></li>
+                    </ul>
+                </div>
+                <button class="accordion-header d-flex justify-between">Help <span class="downIcons"><i
+                            class="fa-solid fa-chevron-down"></i></span></button>
+                <div class="accordionContent ">
+                    <ul>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">FAQs</a></li>
+                        <li><a href="">Store Locator</a></li>
+                        <li><a href="">Cancellation & Return</a></li>
+                        <li><a href="">Shipping & Delivery</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="right-section">
                 <h2>Sign up for our newsletter</h2>
                 <p>For plant care tips, our featured plant of the week, exclusive offers and discounts</p>
@@ -384,7 +420,7 @@
 <script src="products.js"></script>
 <script src="cart.js"></script>
 <script src="script.js"></script>
-<script>
+<!-- <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
 
@@ -403,7 +439,29 @@
             }
         });
     }
-</script>
+</script> -->
+<script>
+    // footer accordion
+    // Get all accordion buttons
+    var acc = document.getElementsByClassName("accordion-header");
 
+    // Loop through the buttons and add the click event listener
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            // Toggle the "active" class for the current button
+            this.classList.toggle("active");
+
+            // Get the panel next to the clicked button
+            var accordionContent = this.nextElementSibling;
+
+            // Toggle the panel visibility
+            if (accordionContent.style.display === "block") {
+                accordionContent.style.display = "none";
+            } else {
+                accordionContent.style.display = "block";
+            }
+        });
+    }
+</script>
 
 </html>

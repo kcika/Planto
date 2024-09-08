@@ -149,5 +149,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// product page
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    expandImg.src = imgs.src;
+    expandImg.parentElement.style.display = "block";
+}
 
-
+// Automatically display the first image when the page loads
+window.onload = function () {
+    var firstImage = document.getElementById("firstImage");
+    myFunction(firstImage);
+    document.getElementById('expandedContainer').style.display = "block";
+};
