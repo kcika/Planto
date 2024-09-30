@@ -95,15 +95,25 @@
                         <p class="fs-28 fw-semibold">Rs. 380</p>
                     </div>
                     <div class="size">
-                        <p class="fs-18 m-10">Select Size</p>
-                        <button class="size-btn">Small</button>
-                        <button class="size-btn">Medium</button>
+                        <p class="fs-18 m-20">Select Size</p>
+                        <label class="checkbox-btn">
+                            <input type="radio" name="customBtn" id="option1">
+                            <span class="btn-text">Small</span>
+                        </label>
+                        <label class="checkbox-btn">
+                            <input type="radio" name="customBtn" id="option2">
+                            <span class="btn-text">Medium</span>
+                        </label>
+                        <label class="checkbox-btn">
+                            <input type="radio" name="customBtn" id="option3">
+                            <span class="btn-text">Large</span>
+                        </label>
                     </div>
                     <p class="fs-18 m-10">Quantity</p>
                     <div class="productQuan m-20 d-flex">
-                        <div>-</div>
-                        <div>1</div>
-                        <div>+</div>
+                        <button class="btnQ" id="decrease">-</button>
+                        <button class="btnQ" id="noOfUnits">1</button>
+                        <button class="btnQ" id="increase">+</button>
                     </div>
                     <button class="productBuy">ADD TO CART</button>
                     <div class="fs-18 m-10">
@@ -497,6 +507,24 @@
             }
         });
     }
+</script>
+<script>
+    let incBtn = document.getElementById("increase");
+    let decBtn = document.getElementById("decrease");
+    let noOfUnits = document.getElementById("noOfUnits");
+
+    let units = 1;
+    incBtn.addEventListener("click", () => {
+        units++;
+        noOfUnits.innerHTML = units;
+    })
+    decBtn.addEventListener("click", () => {
+        if (units > 1) {
+            units--;
+            noOfUnits.innerHTML = units;
+        }
+    }
+    )
 </script>
 
 </html>

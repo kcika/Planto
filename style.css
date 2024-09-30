@@ -175,6 +175,10 @@ header .icons #menu-bars {
     font-size: 40px;
 }
 
+.content .pSmall {
+    display: none;
+}
+
 .btn-shop {
     display: inline-block;
     width: 220px;
@@ -917,13 +921,52 @@ header .icons #menu-bars {
     color: gold;
 }
 
-.size-btn {
-    padding: 8px 14px;
-    font-size: 18px;
-    border-radius: 5px;
+/* size select checkbox */
+input[type="radio"] {
+    display: none;
+}
+
+.checkbox-btn {
+    display: inline-block;
     margin-right: 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
     border: 1px solid #000;
-    background: transparent;
+}
+
+.checkbox-btn .btn-text {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 18px;
+    border: 1px solid transparent;
+    color: #000;
+}
+
+input[type="radio"]:checked+.btn-text {
+    background-color: #173C1C;
+    color: #fafafa;
+}
+
+.checkbox-btn:hover .btn-text {
+    background-color: #173C1C;
+    color: #FFFAF5;
+}
+
+.btnQ {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    background-color: #ddd;
+    border-radius: 50%;
+    border: 1px solid #173C1C;
+    font-size: 18px;
+    color: #000;
+}
+
+.btnQ:nth-child(2) {
+    border: none;
+    background-color: transparent;
 }
 
 .productDesc .price p:first-child {
@@ -1413,17 +1456,27 @@ button#submit {
     .home-page {
         position: relative;
         width: 100%;
-        height: 350px;
+        height: 450px;
         margin-top: 63px;
-        background: url(images/photo-1483794344563-d27a8d18014e.jpeg) no-repeat;
+        background: url(images/pexels-nietjuh-776656.jpg)center no-repeat;
         background-size: cover;
         overflow: hidden;
     }
 
+    .homeoverlay {
+        width: 100%;
+        height: 450px;
+        position: absolute;
+        background-color: #ccc;
+        opacity: .4;
+    }
+
     .content {
-        width: 70vw;
-        left: 160px;
-        text-align: left;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        text-align: center;
     }
 
     .content h1 {
@@ -1431,6 +1484,14 @@ button#submit {
     }
 
     .content p {
+
+        display: none;
+    }
+
+    .content .pSmall {
+        font-size: 18px;
+        font-weight: 600;
+        display: block;
         margin: 10px 0;
     }
 
@@ -2069,7 +2130,7 @@ button#submit {
         width: 100%;
         height: 350px;
         margin-top: 63px;
-        background: url(images/photo-1483794344563-d27a8d18014e.jpeg) no-repeat;
+        background: url(images/pexels-nietjuh-776656.jpg) no-repeat;
         background-size: cover;
         overflow: hidden;
     }
@@ -2083,7 +2144,7 @@ button#submit {
     .btn-shop {
         width: 140px;
         font-size: 18px;
-        padding: 10px 0;
+        padding: 10px;
     }
 
     .content p:first-child {
@@ -2527,6 +2588,10 @@ button#submit {
         justify-content: center;
         gap: 30px;
         align-items: center;
+    }
+
+    .blogs .blog:nth-child(3) {
+        display: none;
     }
 
     .overflow-hidden {
